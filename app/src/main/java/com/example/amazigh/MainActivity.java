@@ -46,22 +46,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void openOefenen() {
-        Intent intent = new Intent(this, OefenActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, OefenActivity.class);
+//        startActivity(intent);
     }
 
     public void openQuiz() {
-        Intent intent = new Intent(this, QuizActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, QuizActivity.class);
+//        startActivity(intent);
     }
 
     public void openResultaten() {
-        Intent intent = new Intent(this, ResultsActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, ResultsActivity.class);
+//        startActivity(intent);
     }
 
     public void openOver() {
-        Intent intent = new Intent(this, OverActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, OverActivity.class);
+//        startActivity(intent);
     }
 }
