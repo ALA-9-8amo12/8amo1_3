@@ -39,7 +39,6 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
         // model is een instantie van Circuit, dus gebruikt de Getters
         holder.AmaWoord.setText("Amazigh: " + model.getAmazigh_woord());
         holder.Nedwoord.setText("Nederlands: " + model.getWoord());
-        holder.ButtonAudio.setso
         // Voor het plaatsen van een plaatje wordt de library Glide gebruikt.
         Glide.with(holder.itemView.getContext())
                 .load(model.getFoto())
