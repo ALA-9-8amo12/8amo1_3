@@ -37,19 +37,22 @@ dependencies {
     // Voor gebruik Firebase
     implementation 'com.firebaseui:firebase-ui-storage:6.2.1'
     implementation 'com.google.firebase:firebase-storage:19.2.0'
-
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
+    implementation 'com.google.firebase:firebase-database:19.5.1'
+    implementation 'com.google.firebase:firebase-core:18.0.0'
+    implementation 'com.google.firebase:firebase-database:19.5.1'
+    compile'com.firebaseui:firebase-ui-database:6.2.1'
+
 
     // Voor gebruik van Glide library voor plaatjes
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation "com.zlc.glide:webpdecoder:1.3.4.8.0"
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
-    implementation 'com.google.firebase:firebase-auth:20.0.1'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
-
-    implementation 'androidx.viewpager2:viewpager2:1.1.0-alpha01'
 
 
 }
