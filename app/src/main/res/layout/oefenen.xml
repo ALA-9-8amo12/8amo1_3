@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_marginHorizontal="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="20dp"
     android:scrollbars="vertical"
+    app:cardBackgroundColor="#03A9F4"
     app:cardCornerRadius="20dp">
 
 
@@ -16,6 +16,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/FOTO"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:contentDescription="plaatje" />
 
         <TextView
             android:id="@+id/tvCountry"
@@ -26,38 +35,29 @@
             android:layout_marginEnd="16dp"
             android:text=""
             android:textColor="#F50057"
-            android:textSize="18sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/FOTO"
-            android:layout_width="match_parent"
-            android:layout_height="100pt"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="1dp"
-            android:contentDescription="plaatje"
-            android:layout_marginRight="1dp" />
 
         <TextView
             android:id="@+id/tvCity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#F50057"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="96dp"
             android:layout_marginEnd="16dp"
             android:text=""
-            />
+            android:textColor="#F8DF00"
+            android:textSize="36sp" />
 
-        <TextView
-            android:id="@+id/tvName"
+        <Button
+            android:id="@+id/ButtonAudio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="96dp"
             android:layout_marginEnd="16dp"
-            android:text=""
-            />
+            android:text="Beluister"
+            android:textSize="36sp" />
 
     </LinearLayout>
 

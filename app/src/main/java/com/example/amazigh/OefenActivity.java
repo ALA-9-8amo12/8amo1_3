@@ -46,17 +46,6 @@ DatabaseReference mBase;
         // Connecting Adapter class with the Recycler view
         recyclerView.setAdapter(adapter);
 
-
-//        ImageView imageView = (ImageView) findViewById(R.id.FOTO);
-//
-//        Glide.with(this)  // this
-//                .load("gs://amazigh-28582.appspot.com/Plaatjes/Dieren 01/dieren01_ezel.jpg")
-//                .placeholder(R.drawable.splashscreen)
-//                .into(imageView);    }
-
-
-
-
     }
     // Starten en stoppen van de adapter
     @Override protected void onStart()

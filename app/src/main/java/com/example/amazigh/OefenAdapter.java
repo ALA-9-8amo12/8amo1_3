@@ -1,8 +1,10 @@
 package com.example.amazigh;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -11,11 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import android.media.MediaPlayer;
 
 // KLasse aanmaken op basis van de abstracte klass FireBaseRecycleAdapter
 // Een aantal methoden zijn verplicht
 public class OefenAdapter extends FirebaseRecyclerAdapter<
         Oefen, OefenAdapter.CircViewholder> {
+
 
     // Verplichte methode, standaard
     public OefenAdapter(
@@ -33,8 +37,9 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
     {
         // Gegevens van circuit worden opgehaald uit model, en in viewholder gezet
         // model is een instantie van Circuit, dus gebruikt de Getters
-        holder.AmaWoord.setText(model.getAmazigh_woord());
-        holder.Nedwoord.setText(model.getWoorden());
+        holder.AmaWoord.setText("Amazigh: " + model.getAmazigh_woord());
+        holder.Nedwoord.setText("Nederlands: " + model.getWoord());
+        holder.ButtonAudio.setso
         // Voor het plaatsen van een plaatje wordt de library Glide gebruikt.
         Glide.with(holder.itemView.getContext())
                 .load(model.getFoto())
@@ -61,14 +66,20 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
             extends RecyclerView.ViewHolder {
         TextView Nedwoord,AmaWoord;
         ImageView Image;
+        Button ButtonAudio;
         public CircViewholder(@NonNull View itemView)
         {
             super(itemView);
 //            Name = itemView.findViewById(R.id.tvName);
-            AmaWoord = itemView.findViewById(R.id.tvCountry);
-            Nedwoord = itemView.findViewById(R.id.tvCity);
+            AmaWoord = itemView.findViewById(R.id.tvCity);
+            Nedwoord = itemView.findViewById(R.id.tvCountry);
+            ButtonAudio = itemView.findViewById(R.id.ButtonAudio);
             Image = itemView.findViewById(R.id.FOTO);
         }
+    }
+
+    public void Speel_Geluid() {
+
     }
 
 }

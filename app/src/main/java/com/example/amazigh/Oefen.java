@@ -2,7 +2,7 @@ package com.example.amazigh;
 
 public class Oefen {
 
-    private String Amazigh_woord, Geluid, Foto, Woorden;
+    private String Amazigh_woord, Geluid, Foto, Woord;
     private int Woord_id,category_id;
 
     public String getAmazigh_woord() {
@@ -37,12 +37,12 @@ public class Oefen {
         Woord_id = woord_id;
     }
 
-    public String getWoorden() {
-        return Woorden;
+    public String getWoord() {
+        return Woord;
     }
 
-    public void setWoorden(String woorden) {
-        Woorden = woorden;
+    public void setWoord(String woord) {
+        Woord = woord;
     }
 
     public int getCategory_id() {
