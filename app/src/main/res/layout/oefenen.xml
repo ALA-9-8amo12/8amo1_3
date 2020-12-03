@@ -1,45 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="20dp"
+    android:scrollbars="vertical"
+    app:cardBackgroundColor="#03A9F4"
+    app:cardCornerRadius="20dp">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="176dp"
-        android:layout_height="130dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="399dp" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="176dp"
-        android:layout_height="130dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="576dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="176dp"
-        android:layout_height="130dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="576dp" />
+        <ImageView
+            android:id="@+id/FOTO"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:contentDescription="plaatje" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="176dp"
-        android:layout_height="130dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="399dp" />
+        <TextView
+            android:id="@+id/tvCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text=""
+            android:textColor="#F50057"
+            android:textSize="36sp"
+            android:textStyle="bold" />
 
-    <ImageView
-        android:layout_width="296dp"
-        android:layout_height="181dp"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="68dp" />
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="16dp"
+            android:text=""
+            android:textColor="#F8DF00"
+            android:textSize="36sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/ButtonAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="16dp"
+            android:text="Beluister"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
