@@ -15,6 +15,8 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import android.media.MediaPlayer;
 
+import java.io.IOException;
+
 // KLasse aanmaken op basis van de abstracte klass FireBaseRecycleAdapter
 // Een aantal methoden zijn verplicht
 public class OefenAdapter extends FirebaseRecyclerAdapter<
@@ -35,6 +37,8 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
     protected void onBindViewHolder(@NonNull CircViewholder holder,
                                     int position, @NonNull Oefen model)
     {
+//Audio Systeem
+
         // Gegevens van circuit worden opgehaald uit model, en in viewholder gezet
         // model is een instantie van Circuit, dus gebruikt de Getters
         holder.AmaWoord.setText("Amazigh: " + model.getAmazigh_woord());
@@ -76,9 +80,4 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
             Image = itemView.findViewById(R.id.FOTO);
         }
     }
-
-    public void Speel_Geluid() {
-
-    }
-
 }
