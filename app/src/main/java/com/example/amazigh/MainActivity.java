@@ -1,11 +1,11 @@
 package com.example.amazigh;
 
-        import androidx.appcompat.app.AppCompatActivity;
-
         import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -46,12 +46,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void openOefenen() {
-        Intent intent = new Intent(this, OefenActivity.class);
+        Intent intent = new Intent(this, CategoryActivity.class);
+        intent.putExtra("type", "oefen");
         startActivity(intent);
     }
 
     public void openQuiz() {
-        Intent intent = new Intent(this, QuizActivity.class);
+        Intent intent = new Intent(this, CategoryActivity.class);
+        intent.putExtra("type", "quiz");
         startActivity(intent);
     }
 

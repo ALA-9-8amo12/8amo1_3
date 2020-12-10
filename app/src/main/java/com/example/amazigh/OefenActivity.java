@@ -1,34 +1,33 @@
 package com.example.amazigh;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.bumptech.glide.Glide;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.Query;
 
 
 public class OefenActivity extends AppCompatActivity {
 
-OefenAdapter adapter;
+    OefenAdapter adapter;
    private RecyclerView recyclerView;
-DatabaseReference mBase;
+    Query mBase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oefenen);
-        mBase = FirebaseDatabase.getInstance().getReference().child("woorden");
+
+        Intent intent = getIntent();
+        Integer cat_id = intent.getIntExtra("cat_id", 0);
+
+        mBase = FirebaseDatabase.getInstance().getReference().child("woorden").orderByChild("category_id").equalTo(cat_id);
 
         recyclerView = findViewById(R.id.recycler1);
 
@@ -58,4 +57,5 @@ DatabaseReference mBase;
     {
         super.onStop();
         adapter.stopListening();
-    }}
+    }
+}
