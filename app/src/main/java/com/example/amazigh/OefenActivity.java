@@ -1,17 +1,35 @@
 package com.example.amazigh;
 
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSnapHelper;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
+
+import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
+import java.io.IOException;
 
-public class OefenActivity extends AppCompatActivity {
+
+public class OefenActivity extends AppCompatActivity{
 
     OefenAdapter adapter;
     private ViewPager2 viewpager2;
@@ -41,6 +59,8 @@ public class OefenActivity extends AppCompatActivity {
 
         // Connecting Adapter class with the Recycler view
         viewpager2.setAdapter(adapter);
+
+        Button audio = (Button) findViewById(R.id.ButtonAudio);
 
     }
     // Starten en stoppen van de adapter
