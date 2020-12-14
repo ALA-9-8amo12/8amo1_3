@@ -49,7 +49,4 @@
         android:layout_marginEnd="16dp"
         android:text="Beluister"
         android:textSize="36sp" />
-
-
-
 </LinearLayout>

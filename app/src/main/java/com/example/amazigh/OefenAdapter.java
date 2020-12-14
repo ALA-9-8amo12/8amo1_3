@@ -22,7 +22,7 @@ import java.io.IOException;
 public class OefenAdapter extends FirebaseRecyclerAdapter<
         Oefen, OefenAdapter.CircViewholder> {
 
-
+    Button ButtonAudio;
     // Verplichte methode, standaard
     public OefenAdapter(
             @NonNull FirebaseRecyclerOptions<Oefen> options)
@@ -37,6 +37,7 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
     protected void onBindViewHolder(@NonNull CircViewholder holder,
                                     int position, @NonNull final Oefen model)
     {
+
         final MediaPlayer mediaPlayer = new MediaPlayer();
         // Gegevens van circuit worden opgehaald uit model, en in viewholder gezet
         // model is een instantie van Circuit, dus gebruikt de Getters
@@ -106,3 +107,11 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
     }
 
 }
+
+
+
+
+}
+
+
+    }
