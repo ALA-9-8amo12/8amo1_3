@@ -111,7 +111,7 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
 
 
 
-}
 
 
-    }
+
+    
