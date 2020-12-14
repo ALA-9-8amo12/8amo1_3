@@ -22,7 +22,7 @@ import java.io.IOException;
 public class OefenAdapter extends FirebaseRecyclerAdapter<
         Oefen, OefenAdapter.CircViewholder> {
 
-
+    Button ButtonAudio;
     // Verplichte methode, standaard
     public OefenAdapter(
             @NonNull FirebaseRecyclerOptions<Oefen> options)
@@ -35,10 +35,14 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
     // Wordt aangepast voor gebruik met klasse Circuit
     @Override
     protected void onBindViewHolder(@NonNull CircViewholder holder,
-                                    int position, @NonNull Oefen model)
+                                    int position, @NonNull final Oefen model)
     {
+<<<<<<< Updated upstream
 //Audio Systeem
 
+=======
+        final MediaPlayer mediaPlayer = new MediaPlayer();
+>>>>>>> Stashed changes
         // Gegevens van circuit worden opgehaald uit model, en in viewholder gezet
         // model is een instantie van Circuit, dus gebruikt de Getters
         holder.AmaWoord.setText("Amazigh: " + model.getAmazigh_woord());
@@ -47,6 +51,30 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
         Glide.with(holder.itemView.getContext())
                 .load(model.getFoto())
                 .into(holder.Image);
+
+        holder.ButtonAudio.setOnClickListener(new View.OnClickListener() {
+            boolean check = true;
+            @Override
+            public void onClick(View v) {
+                try {
+                    if(check) {
+                        check = false;
+                        mediaPlayer.setDataSource(model.getGeluid());
+                        mediaPlayer.prepare();
+                        mediaPlayer.start();
+                        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mp) {
+                                mediaPlayer.reset();
+                                check = true;
+                            }
+                        });
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     // Verplichte methode. Geeft als waarde een viewholder van het juiste type
@@ -80,4 +108,13 @@ public class OefenAdapter extends FirebaseRecyclerAdapter<
             Image = itemView.findViewById(R.id.FOTO);
         }
     }
+<<<<<<< Updated upstream
 }
+=======
+
+
+
+    }
+
+
+>>>>>>> Stashed changes
