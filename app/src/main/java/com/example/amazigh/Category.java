@@ -4,13 +4,6 @@ public class Category {
     private String category;
     private int id, Limit;
 
-//    public Category(String category, int id, int Limit)
-//    {
-//        this.category = category;
-//        this.id = id;
-//        this.Limit = Limit;
-//    }
-
     public String getCategory() {
         return category;
     }

@@ -12,11 +12,15 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class CategoryActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     DatabaseReference mBase;
     CategoryAdapter adapter;
+    ArrayList<Integer> randomIndex = new ArrayList<Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +51,22 @@ public class CategoryActivity extends AppCompatActivity {
                                     Intent intent = new Intent(CategoryActivity.this, OefenActivity.class);
                                     intent.putExtra("cat_id", position + 1);
                                     startActivity(intent);
-                                } else {
+                                } else if (type.equals("quiz")) {
+                                    if (position == 8) {
+                                        for (int i = 1; i <= 10; i++) {
+                                            randomIndex.add(i);
+                                        }
+                                        Collections.shuffle(randomIndex);
+
+                                    } else {
+                                        for (int i = 1; i <= 15; i++) {
+                                            randomIndex.add(i);
+                                        }
+                                        Collections.shuffle(randomIndex);
+                                    }
                                     Intent intent = new Intent(CategoryActivity.this, QuizActivity.class);
                                     intent.putExtra("cat_id", position + 1);
+                                    intent.putExtra("integers", randomIndex);
                                     startActivity(intent);
                                 }
                             }
@@ -80,5 +97,14 @@ public class CategoryActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+
+    boolean contains(ArrayList<Integer> list, Integer name) {
+        for (Integer item : list) {
+            if (item.equals(name)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
