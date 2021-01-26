@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Amazigh</string>
+    <string name="aboutText">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum dui, pharetra vel aliquet ut, sagittis quis libero.
+        Praesent nec nisl neque. Ut mattis, neque sed mattis efficitur, ex lectus tincidunt eros, et posuere purus risus vitae arcu.
+        Vivamus faucibus ut justo eget vestibulum. Mauris ut erat lacus. Proin egestas viverra lacus at tempus.
+        Sed cursus, mi at malesuada convallis, magna dui tempus nisl, et condimentum ex nibh eget nunc.
+        Nullam nec molestie elit, at lacinia nunc. Cras venenatis, sem non dignissim commodo, lorem lectus vulputate nisl, sit amet iaculis nibh purus ut turpis.
+
+
+        Donec rutrum elit et ex varius, in cursus quam vehicula. Nulla facilisi.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        Vivamus scelerisque, tellus et pharetra tristique, est arcu elementum ligula, at interdum urna turpis id nulla.
+        Suspendisse consequat tincidunt purus, at maximus massa feugiat at. Nullam porttitor efficitur augue, ut faucibus libero gravida quis.
+
+
+    </string>
+
+    <string name="woordAmazighQuiz">Amazigh Woord Test</string>
+    <string name="scoreTitel">Score</string>
+
 </resources>
